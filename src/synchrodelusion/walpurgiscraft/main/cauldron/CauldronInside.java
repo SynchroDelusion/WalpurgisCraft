@@ -71,7 +71,7 @@ public class CauldronInside {
 			clear();
 			return;
 		}
-		result.effect(caul);
+		result.effect(caul,c);
 		clear();
 	}
 }
