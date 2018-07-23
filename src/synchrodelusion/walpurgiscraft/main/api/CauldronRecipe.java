@@ -7,12 +7,9 @@ import org.bukkit.Material;
 public class CauldronRecipe {
 	private final Material[] list;
 	private final CauldronRecipeResult result;
-	public CauldronRecipe(CauldronRecipeResult result, Material f, Material s, Material t) {
+	public CauldronRecipe(CauldronRecipeResult result, Material[] mats) {
 		this.result=result;
-		list=new Material[3];
-		list[0]=f;
-		list[1]=s;
-		list[2]=t;
+		list=mats;
 		Arrays.sort(list);
 	}
 	public Material[] getList(){
