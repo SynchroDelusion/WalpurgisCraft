@@ -61,12 +61,6 @@ public class CauldronEventHandler implements Listener{
 	public void onItemDrop(PlayerDropItemEvent e) {
 		Item drop=e.getItemDrop();
 		if(WalpurgisCraft.getInst().getAPI().isUsed(drop.getItemStack().getType())) {
-			NBTItem nbt=new NBTItem(drop.getItemStack());
-			if(nbt!=null) {
-				if(nbt.getBoolean("walpurgis_drop")) {
-					return;
-				}
-			}
 			if(drop.isOnGround()) itemOnGround(drop, e.getPlayer().getName());
 			else {
 				new CauldronDropHandler(drop, e.getPlayer().getName());

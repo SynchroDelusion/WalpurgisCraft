@@ -26,7 +26,7 @@ public class WalpurgisCraftAPI {
 		Arrays.sort(mats);
 		for(CauldronRecipe recipe: recipes) {
 			Material[] comp=recipe.getList();
-			if((mats[0]==comp[0])&&(mats[1]==comp[1])&&(mats[2]==comp[2])) {
+			if(Arrays.equals(mats, comp)) {
 				return recipe.getResult();
 			}
 		}

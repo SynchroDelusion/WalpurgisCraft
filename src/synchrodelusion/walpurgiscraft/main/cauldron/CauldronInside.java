@@ -17,7 +17,7 @@ import synchrodelusion.walpurgiscraft.main.cauldron.events.CauldronItemPutEvent;
 
 public class CauldronInside {
 	private final Cauldron caul;
-	private final List<Material> contents=new ArrayList<Material>();
+	private final List<Material> contents=new ArrayList<Material>(3);
 	public CauldronInside(Cauldron caul) {
 		this.caul=caul;
 	}
