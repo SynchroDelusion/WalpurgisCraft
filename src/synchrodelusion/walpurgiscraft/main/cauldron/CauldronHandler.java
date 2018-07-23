@@ -120,19 +120,4 @@ public class CauldronHandler {
 		Vector vector = t.subtract(f);
 		return vector;
 	}
-	/*@Deprecated
-	private String generateID() {
-		Random random = new Random();
-		String id="";
-		String alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		for(int i=0; i<=1; i++) {
-			int letter=random.nextInt(alphabet.length());
-			id=id+alphabet.charAt(letter);
-		}
-		id=id+"-";
-		for(int i=0; i<=4; i++) {
-			id=id+random.nextInt(10);
-		}
-		return id;
-	}*/
 }

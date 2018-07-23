@@ -54,16 +54,15 @@ public class CauldronInside {
 	private void checkCombination() {
 		Location sl=caul.getLocation().clone();
 		sl.getWorld().playSound(sl, Sound.ITEM_BUCKET_EMPTY_LAVA, 1F, 2F);
-		Material f=contents.get(0);
-		Material s=contents.get(1);
-		Material t=contents.get(2);
-		CauldronRecipeResult result=WalpurgisCraft.getInst().getAPI().getResult(f,s,t);
+		Material[] c=new Material[3];
+		c=contents.toArray(new Material[3]);
+		CauldronRecipeResult result=WalpurgisCraft.getInst().getAPI().getResult(c);
 		if(result==null) {
 			for(int i=0; i<=2; i++) {
 				ItemStack item=new ItemStack(contents.get(i));
 				Location loc=caul.getLocation().getBlock().getLocation().clone();
 				loc.add(0.5, 0, 0.5);
-				Item ent=caul.getLocation().getWorld().dropItem(loc.clone().add(0, 2, 0), item);
+				Item ent=caul.getLocation().getWorld().dropItem(loc.clone().add(0, 1, 0), item);
 				ent.setGravity(false);
 				ent.setVelocity(new Vector(0,0,0));
 				ent.setGlowing(true);
@@ -74,6 +73,5 @@ public class CauldronInside {
 		}
 		result.effect(caul);
 		clear();
-		return;
 	}
 }

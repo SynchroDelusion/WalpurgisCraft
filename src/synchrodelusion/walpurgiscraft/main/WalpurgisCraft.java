@@ -5,11 +5,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import synchrodelusion.walpurgiscraft.main.api.WalpurgisCraftAPI;
 import synchrodelusion.walpurgiscraft.main.cauldron.CauldronHandler;
 public class WalpurgisCraft extends JavaPlugin{
-	private static WalpurgisCraft inst=null;
+	private static WalpurgisCraft inst;
 	private CauldronHandler cauldronHandler;
 	private WalpurgisCraftAPI api;
 	public void onEnable() {
-		if(inst==null) inst=this;
+		inst=this;
 		cauldronHandler=new CauldronHandler();
 		api=new WalpurgisCraftAPI();
 	}

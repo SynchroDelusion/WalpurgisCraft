@@ -1,6 +1,7 @@
 package synchrodelusion.walpurgiscraft.main.cauldron.events.handlers;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -47,7 +48,9 @@ public class CauldronEventHandler implements Listener{
 					WalpurgisCraft.getInst().getCauldronHandler().removeCauldron(caul);
 					e.setDropItems(false);
 					ItemStack item=WalpurgisCraft.getInst().getCauldronHandler().createCauldron();
-					e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), item);
+					if(e.getPlayer().getGameMode()!=GameMode.CREATIVE){
+						e.getBlock().getWorld().dropItemNaturally(e.getBlock().getLocation(), item);
+					}
 				}else {
 					e.setCancelled(true);
 				}
