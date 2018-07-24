@@ -18,7 +18,7 @@ public class CauldronShapedRecipe {
 		plugin.getServer().addRecipe(cauldronRecipe);
 	}
 	protected ItemStack createCauldron() {
-		ItemStack item=new ItemStack(Material.CAULDRON);
+		ItemStack item=new ItemStack(Material.CAULDRON_ITEM);
 		final ItemMeta meta=item.getItemMeta();
 		meta.setDisplayName("§bMagiczny Kocio³ek");
 		item.setItemMeta(meta);
@@ -32,8 +32,8 @@ public class CauldronShapedRecipe {
 		ShapedRecipe recipe=new ShapedRecipe(key, cauldron);
 		recipe.shape("AAA","AEA","ACA");
 		recipe.setIngredient('A', Material.AIR);
-		recipe.setIngredient('E', Material.ENCHANTING_TABLE);
-		recipe.setIngredient('C', Material.CAULDRON);
+		recipe.setIngredient('E', Material.ENCHANTMENT_TABLE);
+		recipe.setIngredient('C', Material.CAULDRON_ITEM);
 		return recipe;
 	}
 }
