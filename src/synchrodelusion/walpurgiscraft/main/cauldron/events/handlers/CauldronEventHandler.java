@@ -22,7 +22,7 @@ import synchrodelusion.walpurgiscraft.main.cauldron.events.CauldronPlaceEvent;
 public class CauldronEventHandler implements Listener{
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent e) {
-		if(e.getItemInHand().getType().equals(Material.CAULDRON_ITEM)) {
+		if(e.getItemInHand().getType().equals(Material.CAULDRON)) {
 			if(e.isCancelled()) return;
 			NBTItem nbt=new NBTItem(e.getItemInHand());
 			if(nbt.getBoolean("walpurgis_cauldron")) {
